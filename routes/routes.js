@@ -65,11 +65,11 @@ app.get("/items/:id", function(req, res) {
 	var id = req.params.id;
 	db.get(id, function(err, body) {
 		if (err){
-			console.log("ERROR : Item with id "+id+" not found.");
+			console.log("ERROR : Item with id " + id + " not found.");
 			return res.json({msg: "Error: could not find item: " + id + ". " + err});
 		}
 		else{
-			console.log("Item with id +"id+" found.");
+			console.log("Item with id " + id + " found.");
 			return res.json(body);
 		}
 	});
